@@ -4,13 +4,25 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
+    color: white;
     background-image: url('assets/camera.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 400px;
+    height: 250px;
     position: relative;
+}
+.header2 {
+    background-color: #333;
+    color: white;
+    position: relative;
+    height: 75px;
 }
 
 nav {
@@ -26,7 +38,6 @@ nav ul {
 }
 
 nav a {
-    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
