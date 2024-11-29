@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/camico.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="booking.js"></script>
+    <script src="script.js" defer></script>
+    <title>Booking</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="assets/cartoon-flat-illustration-photographer-with-camera_300636-3161-removebg-preview.png" alt="logo">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+            <li class="nav-item"><a href="booking.html" class="nav-link">Booking Info</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+      <div class="container">
+          <div class="custom-radio">
+              <input type="radio" id="radio-1" name="tabs" checked="">
+              <label class="radio-label" for="radio-1">
+                  <div class="radio-circle"></div>
+                  <span class="radio-text">Birthday Bliss Package</span>
+              </label>
+              <input type="radio" id="radio-2" name="tabs">
+              <label class="radio-label" for="radio-2">
+                  <div class="radio-circle"></div>
+                  <span class="radio-text">Graduation Glory Package</span>
+              </label>
+              <input type="radio" id="radio-3" name="tabs">
+              <label class="radio-label" for="radio-3">
+                  <div class="radio-circle"></div>
+                  <span class="radio-text">Wedding Moments Package </span>
+              </label>
+              <input type="radio" id="radio-4" name="tabs">
+              <label class="radio-label" for="radio-4">
+                <div class="radio-circle"></div>
+                <span class="radio-text">Brand Boost Package </span>
+            </label>
+              <input type="radio" id="radio-5" name="tabs">
+            <label class="radio-label" for="radio-5">
+                <div class="radio-circle"></div>
+                <span class="radio-text">Campus Chronicles Package </span>
+            </label>
+              <input type="radio" id="radio-6" name="tabs">
+            <label class="radio-label" for="radio-6">
+                <div class="radio-circle"></div>
+                <span class="radio-text">Nature's Beauty Package </span>
+            </label>
+          </div>
+          <div class="card">
+              <span class="title">Book Here</span>
+              <form class="form">
+                  <div class="group">
+                      <input placeholder="" type="text" required="">
+                      <label for="name">Name</label>
+                  </div>
+                  <div class="group">
+                      <input placeholder="" type="email" id="email" name="email" required="">
+                      <label for="email">Email</label>
+                  </div>
+                  <div class="group">
+                      <input placeholder="Select a date" type="text" id="booking-date" readonly required>
+                      <label for="booking-date">Booking Date</label>
+                  </div>
+                  <div class="group">
+                      <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+                      <label for="comment">Comment</label>
+                  </div>
+                  <button type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
+      <div id="popup" class="popup">
+          <div class="popup-content">
+              <span id="close-popup" class="close-button">&times;</span>
+              <p>We will reach you as soon as possible. Thank You!</p>
+          </div>
+      </div>
+  </main>
+<footer>
+    <p>&copy; 2024 Mouaz Kabbour Photography. All rights reserved.</p>
+</footer> 
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/camico.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/c22ffb93ed.js" crossorigin="anonymous"></script>
+    <title>Mouaz's Portfolio</title>
+</head>
+
+<body>
+        <nav>
+            <img class="logo" src="assets/cartoon-flat-illustration-photographer-with-camera_300636-3161-removebg-preview.png" alt="logo">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+                <li class="nav-item"><a href="booking.html" class="nav-link">Booking Info</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Hi, I'm Mouaz Kabbour</h1>
+                    <p class="tagline">Capturing Life's Beautiful Moments</p>
+                    <p class="intro">
+                        As a photography student at the Rafic Hariri University, I'm passionate about finding beauty in the everyday and telling stories through my lens. My work focuses on street photography, the university life at RHU, and urban landscapes that reveal the extraordinary in the ordinary.
+                    </p>
+                    <a href="contact.html" class="cta-button">Contact Me</a>
+                </div>
+            </section>
+            <div class="gallery">
+                <a  href="packages.html#birthday-package" class="gallery-item">
+                    <img src="assets/birthday.jpg" alt="Birthday">
+                    <p class="image-description">Capture the joy of your special day with our Birthday Bliss Photography Package. Perfect for all ages, this session includes candid and posed shots of the birthday celebrant, party decor, and fun-filled moments with family and friends. We provide a mix of vibrant portraits and heartwarming candids to tell the story of your celebration.</p>
+                </a>
+                <a href="packages.html#marketing-package" class="gallery-item">
+                    <img src="assets/marketing.jpg" alt="Marketing">
+                    <p class="image-description">Elevate your brand with our Brand Boost Marketing Photography Package, designed to capture stunning visuals that resonate with your target audience. Whether you need product shots, team photos, or lifestyle imagery, we'll create content that tells your brand's story and drives engagement. </p>
+    
+                </a>
+                <a href="packages.html#graduation-package" class="gallery-item">
+                    <img src="assets/graduation.jpg" alt="Graduation">
+                    <p class="image-description">Celebrate your academic achievement with our Graduation Glory Photography Package. Whether it's a solo session or with family and friends, we'll capture your pride, joy, and the excitement of this milestone. The session includes iconic cap-and-gown portraits, candid moments, and creative shots that showcase your unique personality.</p>
+    
+                </a>
+                <a href="packages.html#wedding-package" class="gallery-item">
+                    <img src="assets/wedding.jpg" alt="Wedding">
+                    <p class="image-description">Capture the magic of your big day with our Forever Moments Wedding Photography Package. From heartfelt vows to joyful celebrations, we'll document every detail and emotion, creating timeless memories you'll cherish forever.</p>
+    
+                </a>
+                <a href="packages.html#university-package" class="gallery-item">
+                    <img src="assets/university.jpg" alt="University">
+                    <p class="image-description">Highlight the vibrancy of your university events with our Campus Chronicles Photography Package. From spirited rallies to academic conferences, we capture the essence of your campus activities with dynamic and engaging visuals. Perfect for promoting student life, marketing materials, or preserving institutional memories.</p>
+                </a>
+                <a href="packages.html#nature-package" class="gallery-item">
+                    <img src="assets/nature.jpg" alt="Nature">
+                    <p class="image-description">Immerse yourself in the breathtaking splendor of the outdoors with our Nature’s Beauty Photography Package. Perfect for landscapes, wildlife, or serene portraits in natural settings, this session captures the magic of nature in stunning detail.</p>
+                </a>
+            </div>
+        </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Mouaz Kabbour Photography. All rights reserved.</p>
+    </footer>
+<script>
+    document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        let href = this.getAttribute('href');
+        let [pageUrl, hash] = href.split('#');
+        
+        // If we're already on the packages page
+        if (window.location.pathname.endsWith('packages.html')) {
+            let element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // If we're on a different page, store the hash and navigate
+            sessionStorage.setItem('scrollTo', hash);
+            window.location.href = href;
+        }
+    });
+});
+
+window.addEventListener('load', function() {
+    let scrollTo = sessionStorage.getItem('scrollTo');
+    if (scrollTo && window.location.pathname.endsWith('packages.html')) {
+        let element = document.getElementById(scrollTo);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            sessionStorage.removeItem('scrollTo'); // Clear the stored hash
+        }
+    }
+});
+</script>
+</body>
+
+</html>

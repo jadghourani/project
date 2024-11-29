@@ -1,0 +1,109 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: white;
+    background-color: #000a29;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    color: #fe9b1c;
+}
+
+main {
+    padding: 2rem;
+}
+
+.packages {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;  
+    padding: 2rem;
+}
+
+.package {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%; 
+}
+
+.package:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.package-image {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-text {
+    flex: 1;
+}
+
+.package-text h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.package-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.package-text .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.package-text .cta-button:hover {
+    background-color: #fe9b1c;
+    transform: translateY(-2px);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fe9b1c;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .package,
+    .package:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .package-image,
+    .package-text {
+        width: 100%;
+    }
+}
